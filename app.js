@@ -3,6 +3,7 @@
 const express = require('express');
 const path = require('node:path');
 const indexRouter = require('./routes/indexRouter');
+const formRouter = require ('./routes/formRouter')
 
 
 //server setup
@@ -22,16 +23,14 @@ app.use(express.static(assetsPath));
 
 //middleware setup
 
-//app.get('/', (req, res)=>{
+//app.get('/new', (req, res)=>{
 //    res.render('example', {content: 'some example content'});
 //})
-app.get('/new', (req, res)=>{
-    res.render('example', {content: 'some example content'});
-})
 
 //router setup
 
 app.use('/', indexRouter)
+app.use('/new', formRouter)
 //listining setup
 
 const PORT = 3000

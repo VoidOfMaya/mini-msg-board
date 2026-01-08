@@ -5,5 +5,4 @@ const indexRouter =Router();
 //get
 indexRouter.get('/',indexController)
 
-
 module.exports = indexRouter;
