@@ -2,6 +2,7 @@
 //dependancies
 const express = require('express');
 const path = require('node:path');
+const indexRouter = require('./routes/indexRouter');
 
 
 //server setup
@@ -20,16 +21,22 @@ app.use(express.static(assetsPath));
 
 
 //middleware setup
-app.get('/', (req, res)=>{
+
+//app.get('/', (req, res)=>{
+//    res.render('example', {content: 'some example content'});
+//})
+app.get('/new', (req, res)=>{
     res.render('example', {content: 'some example content'});
 })
 
 //router setup
 
+app.use('/', indexRouter)
 //listining setup
 
 const PORT = 3000
 
 app.listen(PORT, (err)=>{
-    err? console.log(err): console.log(`Server running on port: ${PORT}`)
+    if(err) throw new err ;
+    console.log(`Server running on port: ${PORT}`);
 })

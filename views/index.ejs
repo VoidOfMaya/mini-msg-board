@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>example page</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <h1>HomePage</h1>
+        <h3>Message board:</h3>
+        <ul>
+            <% messages.forEach((message)=>{ %>
+            <li>
+                <div><%= message.user %> at<%= message.added %></div>
+                <p><%= message.text %></p>
+            </li>    
+            <% }); %>
+        </ul>
+    </body>
+</html>
