@@ -4,15 +4,31 @@
         <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
-        <h1>HomePage</h1>
-        <h3><%= title %></h3>
-        <ul>
-            <% messages.forEach((message)=>{ %>
-            <li>
-                <div><%= message.user %> at<%= message.added %></div>
-                <p><%= message.text %></p>
-            </li>    
-            <% }); %>
-        </ul>
+        <header>
+             <h1 style="justify-self: center; padding:  20px 0 20px 0;">Express-msg</h1>
+        </header>
+        <section class="msg-container">
+
+            <h3 class="title"><%= title %></h3>
+            <ul >
+                <% messages.forEach((message)=>{ %>
+                <li class="msg-itm">
+                    <div style="display: flex; flex-direction: row;">
+                        <div style="font-size: 13px; color: rgb(164, 165, 168);display: inline;">from@</div>
+                        <div class="msg-user"><%= message.user %></div>  
+                    </div>
+                    <p class="msg-cntnt"><%= message.text %></p>
+                    
+                    <div style="font-size: 13px; color: rgb(164, 165, 168);">
+                        <%= message.added %>
+                    </div>
+                    
+                </li>    
+                <% }); %>
+            </ul>
+            <button class="msg-add" >
+                add new message!
+            </button>
+        </section>
     </body>
 </html>

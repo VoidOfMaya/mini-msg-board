@@ -1,3 +1,43 @@
 body{
-    color: red;
+    color: white;
+    background-color: rgba(66, 68, 90, 1);
+    margin:0;
+    justify-content: center;
+    align-content: center;
+
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+.msg-container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(1, 1, 15);
+    align-self: center;
+    align-content: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 24px 0px rgb(17, 18, 22);
+    align-items: center;
+}
+.title{
+}
+ul{
+    padding: 0;
+}
+.msg-itm{
+    display: grid;
+    background-color: rgb(14, 13, 13);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+}
+.msg-user{}
+.msg-add{
+    background-color: rgb(14, 13, 13);
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    justify-content: center;
+    border: none;
 }
