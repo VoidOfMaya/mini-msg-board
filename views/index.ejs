@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>example page</title>
+        <title>Express messages</title>
         <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
@@ -26,9 +26,28 @@
                 </li>    
                 <% }); %>
             </ul>
-            <button class="msg-add" >
+            
+            <button id="msg-add">
                 add new message!
             </button>
+
         </section>
+        <dialog id="msg-dialog">
+            <form method="POST" action="/new" class="form-dlg">
+                <label for="user" class="username-name">username:</label>
+                <input name="user" type="text" placeholder="@user" class="username-input">
+                <label for="msg" class="message-name" >message</label>
+                <textarea name="msg" type="text" placeholder="your message ..." class="message-input"></textarea>
+                <button class="msg-btn">submit message</button>
+            </form>
+        </dialog>
+        <script>
+            const newMsgBtn = document.getElementById('msg-add');
+            const msgDialog = document.getElementById('msg-dialog');
+            newMsgBtn.addEventListener('click',()=>{
+                msgDialog.showModal();
+            })
+
+        </script>
     </body>
 </html>

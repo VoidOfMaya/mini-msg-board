@@ -1,3 +1,0 @@
-<form method="POST" action="/new">
-   put your inputs and buttons in here!
-</form>
