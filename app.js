@@ -28,7 +28,7 @@ app.use(express.urlencoded({extended: true}))
 
 app.use('/', indexRouter)
 app.use('/new', indexRouter)
-app.use('/message/:id',indexRouter)
+app.use('/message',indexRouter)
 //listining setup
 
 const PORT = 3000

@@ -4,7 +4,7 @@ const {getAllMsgs,getMsgById, submitForm} = require('../controllers/indexControl
 const indexRouter =Router();
 //get
 indexRouter.get('/',getAllMsgs)
-indexRouter.get('/',getMsgById)
+indexRouter.get('/:id',getMsgById)
 //post
 indexRouter.post('/new',submitForm)
 
