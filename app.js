@@ -22,15 +22,12 @@ app.use(express.static(assetsPath));
 
 
 //middleware setup
-
-//app.get('/new', (req, res)=>{
-//    res.render('example', {content: 'some example content'});
-//})
-
+//parse form data to a request body
+app.use(express.urlencoded({extended: true}))
 //router setup
 
 app.use('/', indexRouter)
-app.use('/new', formRouter)
+app.use('/new', indexRouter)
 //listining setup
 
 const PORT = 3000
