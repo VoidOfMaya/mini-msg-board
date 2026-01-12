@@ -29,6 +29,11 @@ app.use(express.urlencoded({extended: true}))
 app.use('/', indexRouter)
 app.use('/new', indexRouter)
 app.use('/message',indexRouter)
+//error handeling
+app.use((req, res)=>{
+    res.render('404')
+})
+
 //listining setup
 
 const PORT = 3000
