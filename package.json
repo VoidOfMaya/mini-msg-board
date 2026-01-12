@@ -4,7 +4,8 @@
   "description": "this is a simple SSR project from the odin projects node.js /backend course",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
   },
   "repository": {
     "type": "git",
@@ -20,4 +21,5 @@
     "ejs": "^3.1.10",
     "express": "^5.2.1"
   }
+}
 }
