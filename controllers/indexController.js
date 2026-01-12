@@ -12,7 +12,8 @@ async function getMsgById(req, res){
 }
 async function submitForm(req, res){
     const {user, msg}= req.body;
-    messages.push({    text: msg,user: user,added: new Date() });
+    const newId = Number(messages.length + 1);
+    messages.push({    text: msg,user: user,added: new Date(), id: newId});
     res.redirect('/');
 }
 module.exports ={
