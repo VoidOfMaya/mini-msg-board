@@ -2,6 +2,8 @@
     <head>
         <title>Express messages</title>
         <link rel="stylesheet" href="/styles.css">
+        <script src="/index.js" defer></script>
+        
     </head>
     <body>
         <header>
@@ -11,19 +13,20 @@
 
             <h3 class="title"><%= title %></h3>
             <ul >
+                
                 <% messages.forEach((message)=>{ %>
-                <li class="msg-itm">
-                    <div style="display: flex; flex-direction: row;">
-                        <div style="font-size: 13px; color: rgb(164, 165, 168);display: inline;">from@</div>
-                        <div class="msg-user"><%= message.user %></div>  
-                    </div>
-                    <p class="msg-cntnt"><%= message.text %></p>
-                    
-                    <div style="font-size: 13px; color: rgb(164, 165, 168);">
-                        <%= message.added %>
-                    </div>
-                    
-                </li>    
+                <a href="/message/<%= message.id %>" style="text-decoration: none">
+                    <li class="msg-itm">
+                        <div style="display: flex; flex-direction: row;">
+                            <div style="font-size: 13px; color: rgb(164, 165, 168);display: inline;">from@</div>
+                            <div class="msg-user" style="color: white;"><%= message.user %></div>  
+                        </div>
+                        <p class="msg-cntnt" style="color: white;"><%= message.text %></p>
+                        <div style="font-size: 13px; color: rgb(164, 165, 168);">
+                            <%= message.added %>
+                        </div>
+                    </li> 
+                </a>   
                 <% }); %>
             </ul>
             
@@ -35,19 +38,13 @@
         <dialog id="msg-dialog">
             <form method="POST" action="/new" class="form-dlg">
                 <label for="user" class="username-name">username:</label>
-                <input name="user" type="text" placeholder="@user" class="username-input">
+                <input name="user" type="text" placeholder="@user" class="username-input" required>
                 <label for="msg" class="message-name" >message</label>
-                <textarea name="msg" type="text" placeholder="your message ..." class="message-input"></textarea>
+                <textarea name="msg" type="text" placeholder="your message ..." class="message-input" required></textarea>
                 <button class="msg-btn">submit message</button>
+                <button type="button" id="msg-close">close</button>
             </form>
         </dialog>
-        <script>
-            const newMsgBtn = document.getElementById('msg-add');
-            const msgDialog = document.getElementById('msg-dialog');
-            newMsgBtn.addEventListener('click',()=>{
-                msgDialog.showModal();
-            })
 
-        </script>
     </body>
 </html>

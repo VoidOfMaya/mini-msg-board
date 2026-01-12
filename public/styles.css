@@ -22,6 +22,12 @@ body{
 }
 .title{
 }
+.msg-cntnt{
+    width: 400px;
+    white-space: nowarp;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 ul{
     padding: 0;
 }
@@ -39,8 +45,8 @@ ul{
    transform: scale(1.05);
    
 }
-.msg-user{}
 button{
+    z-index: 0;
     background-color: rgb(14, 13, 13);
     color: white;
     padding: 20px;
@@ -52,6 +58,7 @@ button{
     transition: .2s  ease-out;
 }
 button:hover{
+    z-index: 1;
     transform: scale(1.1);
     background-color: rgb(73, 71, 71); 
 
@@ -83,29 +90,44 @@ button:hover{
     "user-name user-input"
     "msg-name msg-name"
     "msg-input msg-input"
-    "btn btn"
+    "btn exit"
     ;
     gap: 10px;
     text-align: center;
     width:600px;
 
 }
-.username-name{ grid-area: user-name;}
+.username-name{ 
+    grid-area: user-name;
+    align-self: center;
+}
 .username-input{grid-area: user-input;}
 
-.message-name{ grid-area: msg-name;}
+.message-name{ 
+    grid-area: msg-name;
+    align-self: end;
+}
 .message-input{grid-area: msg-input;}
 
 .msg-btn{
     grid-area: btn;
-    justify-self: center;
+    
 }
+.msg-close{
+    grid-area: exit;
+    
+}
+.msg-close:hover{
+    background-color: tomato;
+}
+
 textarea{
     border-radius: 20px;
     background-color: rgb(1, 1, 15);
     border-bottom: 1px solid rgb(255, 255, 255);;
     color: white;
     border: none;
+    outline: none;
     padding: 10px;
 }
 input{
@@ -114,12 +136,13 @@ input{
     border-bottom: 1px solid rgb(255, 255, 255);;
     color: white;
     border: none;
+    outline: none;
 }
-input:focus{
+input:hover, input:focus{
     outline: none;
     background-color: rgb(14, 13, 13);
 }
-textarea:focus{
+textarea:hover, textarea:focus{
     outline: none;
     background-color: rgb(14, 13, 13);
 }
