@@ -15,15 +15,16 @@
             <ul >
                 
                 <% messages.forEach((message)=>{ %>
+
                 <a href="/message/<%= message.id %>" style="text-decoration: none">
                     <li class="msg-itm">
                         <div style="display: flex; flex-direction: row;">
                             <div style="font-size: 13px; color: rgb(164, 165, 168);display: inline;">from@</div>
-                            <div class="msg-user" style="color: white;"><%= message.user %></div>  
+                            <div class="msg-user" style="color: white;"><%= message.username %></div>  
                         </div>
                         <p class="msg-cntnt" style="color: white;"><%= message.text %></p>
                         <div style="font-size: 13px; color: rgb(164, 165, 168);">
-                            <%= message.added %>
+                            <%= message.created_at %>
                         </div>
                     </li> 
                 </a>   

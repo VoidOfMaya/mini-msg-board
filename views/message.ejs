@@ -9,12 +9,12 @@
 <body style=" height: 100vh; display: block; align-content: center;">
     <div class="msg-view" style="align-self: center;">
         <header class="msg-title">
-            <h1><div style="color: rgb(164, 165, 168); display: inline;">From</div> <%= message.user %></h1>
+            <h1><div style="color: rgb(164, 165, 168); display: inline;">From</div> <%= message.username %></h1>
         </header>   
         <section class="msg-body">
             <h4>Message: </h4>
             <p style="background-color:rgb(14, 13, 13); padding: 20px; border-radius: 20px; max-width:400px;"><%= message.text %></p>
-            <div style="font-size: 13px; color: rgb(164, 165, 168);"><%= message.added %></div>
+            <div style="font-size: 13px; color: rgb(164, 165, 168);"><%= message.created_at %></div>
         </section>
         <a href="/" class="return-btn">return home</a>
     </div>
