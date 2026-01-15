@@ -19,4 +19,4 @@ this is a simple SSR project from the odin projects node.js /backend course
     - create a Messages table, populate with data(do this via script) ✅
     - add necessary environment variables, create a pool ✅
     - implement required db functions ✅
-    - implement server-side validation for user input as well
+    - implement server-side validation for user input as well✅

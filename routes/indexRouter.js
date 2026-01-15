@@ -7,7 +7,7 @@ indexRouter.get('/',getAllMsgs)
 
 
 // .get use query
-const validateId = [param(':id').notEmpty().isNumeric().withMessage('id not valid check db')]
+const validateId = [param('id').notEmpty().isNumeric().withMessage('id not valid check db')]
 indexRouter.get('/message/:id',validateId,getMsgById)
 //post
 const validateMsg = [body('user').trim().notEmpty().withMessage('please enter a name')
