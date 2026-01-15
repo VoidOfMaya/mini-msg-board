@@ -1,15 +1,17 @@
 //note to self  node works in commonJS
 //dependancies
+require('dotenv').config();
 const express = require('express');
 const path = require('node:path');
 const indexRouter = require('./routes/indexRouter');
-
-
+const {main} = require('./db/seeddb.js')
 
 //server setup
 const app = express(()=>{
     console.log('booting server')
 });
+
+main();
 
 //ejs setup 
 

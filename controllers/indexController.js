@@ -1,4 +1,4 @@
-const {messages} = require('../db')
+const {messages} = require('../db/db')
 
 async function getAllMsgs(req, res){
     res.render('index', {link: "/new",title: "Mini Messageboard", messages: messages});
