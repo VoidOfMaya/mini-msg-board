@@ -8,3 +8,12 @@ express.js
 ejs
 MVC
 SSR
+
+## assignment -from PSQL section
+- in previous mini message Board project:
+    - implement data precistance with a PSQL database and pg
+    - deploy a new db on a hosting service and obtain connection info
+    - create a Messages table, populate with data(do this via script)
+    - add necessary environment variables, create a pool
+    - implement required db functions
+    - implement server-side validation for user input as well
