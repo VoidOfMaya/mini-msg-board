@@ -1,15 +1,18 @@
 # mini-msg-board
 this is a simple SSR project from the odin projects node.js /backend course
 
-technolagies to be explored in this project
+## technolagies to be explored in this project
+    - node.js ✅
+    - express.js ✅
+    - ejs ✅
+    - MVC ✅
+    - SSR ✅
+    - express-validation
+    - dotenv
+    - pg/ node-postgreSQL
 
-node.js
-express.js
-ejs
-MVC
-SSR
 
-## assignment -from PSQL section
+## assignment -from PSQL section(migrate data handeling to a database)
 - in previous mini message Board project:
     - implement data precistance with a PSQL database and pg
     - deploy a new db on a hosting service and obtain connection info
